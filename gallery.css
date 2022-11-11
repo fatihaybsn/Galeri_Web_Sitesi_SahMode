@@ -1,0 +1,185 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font: 1em/1.5 'Open Sans', sans-serif;
+    color: #373737;
+    background: white;
+  }
+  .container {
+    margin: 30px auto;
+    padding-right: .8em;
+    padding-left: .8em;
+    width: 100%;
+    height: auto;
+    max-width: 1860px;
+    background: #fff;
+   }
+   
+  .name  {
+    text-transform:uppercase;
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 1;
+    margin: 0 auto 1.5em;
+    padding-left: 13px;
+  }
+  
+  .name2  {
+    text-transform:uppercase;
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 1;
+    margin: 0 auto 1.5em;
+    padding-left: 13px;
+  }
+  .name3  {
+    text-transform:uppercase;
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 1;
+    margin: 0 auto 1.5em;
+    padding-left: 13px;
+  }
+  .name4  {
+    text-transform:uppercase;
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 1;
+    margin: 0 auto 1.5em;
+    padding-left: 13px;
+  }
+  
+  img {
+      max-width: 100%;
+  }
+  .gallery-img {
+    display: block;
+    width: 100%;
+  }
+  .gallery {
+      /* Max out the height within its container */
+      width: 100%;
+      height: auto;
+      /* Add flexbox styles */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .photo-container {
+    margin-bottom: 3em;
+    text-align: center;
+    margin-left: .8em;    /* these margins depend on the .photo-container width in @media */
+    margin-right: .8em;
+  }
+  
+  h2 {
+    text-transform:uppercase;
+    font-size: 1.5em;
+    line-height: .4;
+  }
+  p {
+    font-size: .9375em;
+    margin: 0 0 1.5em;
+    line-height: 1.4;
+  }
+  
+  
+  
+  /* -- Row 2 Styles --------- */
+  .photo {
+    position: relative;
+    line-height: 0;
+    overflow: hidden;
+    margin-bottom: 2.5em;
+  }
+  .photo-overlay {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0, .5);
+  }
+  .photo-overlay h2 {
+    margin-top: 0;
+  }
+  
+  
+  
+  
+  /* =================================
+    Image Transforms & Transitions
+  ==================================== */
+  
+  /* -- Row 1 --------- */
+  img {
+    transition: transform .5s cubic-bezier(.7,-0.39,.31,1.38);
+  }
+  img:hover {
+    transform: rotate(-5deg) scale(1.1);
+  }
+  
+  /* -- Row 2 --------- */
+  .photo-overlay {
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  .photo-overlay:hover {
+    opacity: 1;
+  }
+  .photo img {
+    transform-origin: 0 0;
+  }
+  .photo:hover img {
+    transform: scale(1.2);
+  }
+  
+  
+  /* =================================
+    Media Queries
+  ==================================== */
+  @media (min-width: 0) and (max-width: 768px) {
+  .container {
+    padding: 0 1.225em 2.5em;
+  }
+  }
+  
+  @media (min-width: 1024px) {
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .photo-container {
+    margin-bottom: 3em;
+    text-align: center;
+    width: 25%;  
+    flex-grow: 1;
+  }
+  }
+  
+  
+  @media (min-width: 1600px) {
+  .photo-container {
+    margin-bottom: 4em;
+    width: 30%;
+  }
+  h2 {
+    line-height: 1;
+  }
+  }

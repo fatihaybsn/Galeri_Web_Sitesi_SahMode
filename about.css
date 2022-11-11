@@ -1,0 +1,29 @@
+
+.main-heading{
+    color:#183b56;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .services-para{
+    color:#616c7c;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: left;
+  }
+  .services-card-heading{
+   color:#183b56;
+    font-size: 17px; 
+  }
+  
+  .services-card-para{
+    color:#616c7c;
+    font-size: 13px;
+  }
+  
+  .services-image{
+    height:60px;
+    width:60px;
+  }
+  
